@@ -109,7 +109,7 @@ class MpvManager(MPV):
         self.command("stop")
 
     def togglePause(self):
-        self.set_property("pause", not self.get_property("pause"))
+        self.set_property("pause_2s", not self.get_property("pause_2s"))
 
     def seekRelative(self, secs):
         self.command("seek", secs, "relative")
