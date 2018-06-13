@@ -62,13 +62,13 @@ def build_deck_audio(name, keep_only_two_sided=False, loops=1):
     for i in range(loops - 1):
         final += cumulative
 
-    final.export('tmp/%s.mp3' % name, format="mp3")
+    final.export('/home/andrew/anki/tmp/%s.mp3' % name, format="mp3")
     print('Uploading %s to google' % name)
-    upload_to_playlist('tmp/%s.mp3' % name)
+    upload_to_playlist('/home/andrew/anki/tmp/%s.mp3' % name)
     col.close()
     print('Sucessfully compiled audio for %s.  There were %s failures.' % (name, failed_cards))
 
 clear_playlist()
+build_deck_audio('Spanish', keep_only_two_sided=True, loops=2)
 build_deck_audio('German Sentences', loops=1)
 build_deck_audio('Czech', loops=10)
-build_deck_audio('Spanish', keep_only_two_sided=True, loops=2)
