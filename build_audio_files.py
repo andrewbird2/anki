@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
-import sys
 import random
+import sys
 
 sys.path.append('/usr/share/anki')
 from anki import Collection
 from pydub import AudioSegment
 from google_play import clear_playlist, upload_to_playlist
+
 collection_path = "/mnt/hgfs/C/Users/andrew.bird/AppData/Roaming/Anki2/Andrew/collection.anki2"
 media_path = "/mnt/hgfs/C/Users/andrew.bird/AppData/Roaming/Anki2/Andrew/collection.media/"
 
@@ -68,7 +69,8 @@ def build_deck_audio(name, keep_only_two_sided=False, loops=1):
     col.close()
     print('Sucessfully compiled audio for %s.  There were %s failures.' % (name, failed_cards))
 
+
 clear_playlist()
+build_deck_audio('Czech', keep_only_two_sided=True, loops=10)
 build_deck_audio('Spanish', keep_only_two_sided=True, loops=2)
-build_deck_audio('German Sentences', loops=1)
-build_deck_audio('Czech', loops=10)
+build_deck_audio('German Sentences', keep_only_two_sided=True, loops=1)
