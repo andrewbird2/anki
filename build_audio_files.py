@@ -71,6 +71,6 @@ def build_deck_audio(name, keep_only_two_sided=False, loops=1):
 
 
 clear_playlist()
-build_deck_audio('Czech', keep_only_two_sided=True, loops=10)
+build_deck_audio('Czech', keep_only_two_sided=True, loops=5)
 build_deck_audio('Spanish', keep_only_two_sided=True, loops=2)
-build_deck_audio('German Sentences', keep_only_two_sided=True, loops=1)
+build_deck_audio('German', keep_only_two_sided=True, loops=1)
